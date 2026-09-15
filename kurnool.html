@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>India Explorer |GhoomoIndia</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        
+
+        /* =========================
+           BASIC SETTINGS
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'DM Sans', Arial, sans-serif;
+            background: #f7f7f3;
+            color: #173b29;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        /* =========================
+           NAVIGATION BAR
+        ========================= */
+        nav {
+            height: 80px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            background: rgba(10, 25, 32, 0.65);
+            backdrop-filter: blur(5px);
+            color: white;
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+            font-style: italic;
+            line-height: 25px;
+        }
+        .logo span {
+            display: block;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 5px;
+            font-style: normal;
+            text-align: center;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+        .nav-links a {
+            font-size: 16px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            color: #1e3fd3;
+        }
+        .nav-links .active {
+            color: #292cdf;
+        }
+        .heart {
+            font-size: 28px;
+            cursor: pointer;
+        }
+        .plan-button {
+            background: #ffd23f;
+            color: #111;
+            padding: 14px 27px;
+            border-radius: 30px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+        .plan-button:hover {
+            transform: translateY(-2px);
+            background: #ffdf68;
+        }
+      /* =========================
+           STATISTICS SECTION
+        ========================= */
+        .stats {
+            background: #095e2f;
+            color: white;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 22px 10%;
+            text-align: center;
+        }
+        .stat {
+            border-right: 1px solid rgba(255,255,255,0.35);
+        }
+        .stat:last-child {
+            border-right: none;
+        }
+        .stat-icon {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        .stat h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 27px;
+        }
+        .stat p {
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body style="background-image: url(kurnool\ img.png); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat ;">
+    <!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+    <div class="logo">
+        GHOOMO
+        <span>INDIA</span>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+
+    <a href="#" class="plan-button">
+        Plan My Trip
+    </a>
+</nav>
+<br><br><br><br>
+    <p style="font-size: x-large;">Plan your perfect trip by exploring these popular destinations</p>
+    <br>
+    <p style="color: blueviolet; font-size: larger;">✤ Belum Caves</p>
+                 <p>🏷️ Destination Category: <br>
+    &nbsp;&nbsp;💸 Cost:<br>
+    &nbsp;&nbsp;⏳ Time Required:<br>
+    &nbsp;&nbsp;🕒 Open Hours:<br>
+    &nbsp;&nbsp;🍽️ Local Hotels:<br>
+    &nbsp;&nbsp;👗 Attire:<br>
+    <a href="https://www.google.com/maps/place/Belum+Caves/@15.1025794,78.1089323,17z/data=!3m1!4b1!4m6!3m5!1s0x3bb43d52afe7f605:0x992eeb0426ec87fa!8m2!3d15.1025794!4d78.1115072!16s%2Fm%2F03clsl1?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">🗺️ View on Google Maps</a></p><br>
+
+    <p style="color: blueviolet; font-size: larger;">✤ Oravakallu Rock Garden</p>
+                 <p>🏷️ Destination Category: <br>
+    &nbsp;&nbsp;💸 Cost:<br>
+    &nbsp;&nbsp;⏳ Time Required:<br>
+    &nbsp;&nbsp;🕒 Open Hours:<br>
+    &nbsp;&nbsp;🍽️ Local Hotels:<br>
+    &nbsp;&nbsp;👗 Attire:<br>
+    <a href="https://www.google.com/maps/place/Orvakallu+Rock+Gardens/@15.6920182,78.149464,17z/data=!4m10!1m2!2m1!1soravakallu+rock+garden+kurnool!3m6!1s0x3bb5c4fe230f5679:0xbfff94f6c5dc7d3!8m2!3d15.6928965!4d78.1521842!15sCh5vcmF2YWthbGx1IHJvY2sgZ2FyZGVuIGt1cm5vb2xaICIeb3JhdmFrYWxsdSByb2NrIGdhcmRlbiBrdXJub29skgESdG91cmlzdF9hdHRyYWN0aW9u4AEA!16s%2Fm%2F0yx_bwd?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">🗺️ View on Google Maps</a></p><br>
+
+    <p style="color: blueviolet; font-size: larger;">✤ Kondareddy Buruju</p>
+                 <p>🏷️ Destination Category: <br>
+    &nbsp;&nbsp;💸 Cost:<br>
+    &nbsp;&nbsp;⏳ Time Required:<br>
+    &nbsp;&nbsp;🕒 Open Hours:<br>
+    &nbsp;&nbsp;🍽️ Local Hotels:<br>
+    &nbsp;&nbsp;👗 Attire:<br>
+    <a href="https://www.google.com/maps/place/Konda+Reddy+Fort/@15.8337635,78.0459829,17z/data=!3m1!4b1!4m6!3m5!1s0x3bb5e7642e400001:0xe5cb3c8a658ac92d!8m2!3d15.8337635!4d78.0485578!16s%2Fg%2F11grpt4vzg?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">🗺️ View on Google Maps</a></p><br>
+
+    <p style="color: blueviolet; font-size: larger;">✤ Yaganti Temple</p>
+                 <p>🏷️ Destination Category: <br>
+    &nbsp;&nbsp;💸 Cost:<br>
+    &nbsp;&nbsp;⏳ Time Required:<br>
+    &nbsp;&nbsp;🕒 Open Hours:<br>
+    &nbsp;&nbsp;🍽️ Local Hotels:<br>
+    &nbsp;&nbsp;👗 Attire:<br>
+    <a href="https://www.google.com/maps/place/Sri+Yaganti+Uma+Maheswara+Temple/@15.3508644,78.1358735,17z/data=!3m1!4b1!4m6!3m5!1s0x3bb4319417241541:0x70f1feee60c64aed!8m2!3d15.3508644!4d78.1384484!16s%2Fm%2F02w_dtm?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">🗺️ View on Google Maps</a></p><br>
+
+    <p style="color: blueviolet; font-size: larger;">✤ Rollapadu Wildlife Sanctuary</p>
+                 <p>🏷️ Destination Category: <br>
+    &nbsp;&nbsp;💸 Cost:<br>
+    &nbsp;&nbsp;⏳ Time Required:<br>
+    &nbsp;&nbsp;🕒 Open Hours:<br>
+    &nbsp;&nbsp;🍽️ Local Hotels:<br>
+    &nbsp;&nbsp;👗 Attire:<br>
+    <a href="https://www.google.com/maps/place/Rollapadu+Bird+Sanctuary/@15.7389773,78.3625227,17z/data=!3m1!4b1!4m6!3m5!1s0x3bb5b920d4865123:0xc246addbcba10492!8m2!3d15.7389773!4d78.3650976!16s%2Fm%2F0vxd6p4?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">🗺️ View on Google Maps</a></p><br>
+<!-- =========================
+     STATISTICS
+========================= -->
+
+<section class="stats"
+style="margin-top: 210px;">
+
+    <div class="stat">
+        <div class="stat-icon">
+            📍
+        </div>
+        <h2>30+</h2>
+        <p>Cities</p>
+    </div>
+
+    <div class="stat">
+        <div class="stat-icon">
+            🗺️
+        </div>
+        <h2>100+</h2>
+        <p>Destinations</p>
+    </div>
+
+    <div class="stat">
+        <div class="stat-icon">
+            🏅
+        </div>
+        <h2>4.7/5</h2>
+        <p>Average Rating</p>
+    </div>
+
+</section>
+
+</body>
+</html>
