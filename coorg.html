@@ -4,219 +4,1156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>India Explorer |GhoomoIndia</title>
+    <title>GHOOMO INDIA - Bangalore</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <style>
-        
 
-        /* =========================
-           BASIC SETTINGS
-        ========================= */
+        /* ==============================
+           GENERAL SETTINGS
+        ============================== */
 
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
+
         body {
-            font-family: 'DM Sans', Arial, sans-serif;
-            background: #f7f7f3;
-            color: #173b29;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #062744;
+            color: white;
         }
+
         a {
             text-decoration: none;
             color: inherit;
         }
-        /* =========================
+
+
+        /* ==============================
            NAVIGATION BAR
-        ========================= */
-        nav {
-            height: 80px;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 10;
+        ============================== */
+
+        .navbar {
+            height: 70px;
+            background: #031d35;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 5%;
-            background: rgba(10, 25, 32, 0.65);
-            backdrop-filter: blur(5px);
-            color: white;
+            padding: 0 4%;
+            border-bottom: 1px solid #24445e;
         }
+
         .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 25px;
-            font-style: italic;
-            line-height: 25px;
-        }
-        .logo span {
-            display: block;
-            font-family: Arial, sans-serif;
-            font-size: 11px;
-            letter-spacing: 5px;
-            font-style: normal;
-            text-align: center;
-        }
-        .nav-links {
             display: flex;
             align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            font-size: 38px;
+        }
+
+        .logo-text h2 {
+            font-size: 22px;
+            letter-spacing: 2px;
+        }
+
+        .logo-text p {
+            font-size: 9px;
+            letter-spacing: 2px;
+            color: #b8c7d5;
+        }
+
+        .nav-links {
+            display: flex;
             gap: 35px;
+            align-items: center;
         }
+
         .nav-links a {
-            font-size: 16px;
-            font-weight: 500;
+            font-size: 15px;
             transition: 0.3s;
         }
+
         .nav-links a:hover {
-            color: #1e3fd3;
+            color: #19d3a2;
         }
-        .nav-links .active {
-            color: #292cdf;
+
+        .search-icon {
+            font-size: 23px;
         }
-        .heart {
-            font-size: 28px;
-            cursor: pointer;
+
+
+        /* ==============================
+           HERO SECTION
+        ============================== */
+
+        .hero {
+            min-height: 390px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgb(3, 23, 41) 0%,
+                    rgba(8, 23, 37, 0.97) 25%,
+                    rgba(3, 16, 28, 0.65) 48%,
+                    rgba(2, 36, 66, 0.05) 75%
+                ),
+
+                url("https://i.pinimg.com/736x/36/fb/ad/36fbadeaf4b2b5d292fc5f9b9eefe5ec.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            padding: 45px 5%;
         }
-        .plan-button {
-            background: #ffd23f;
-            color: #111;
-            padding: 14px 27px;
-            border-radius: 30px;
-            font-weight: 700;
-            transition: 0.3s;
+
+        .hero-content {
+            max-width: 570px;
         }
-        .plan-button:hover {
-            transform: translateY(-2px);
-            background: #ffdf68;
+
+        .location {
+            color: #16d4aa;
+            font-size: 18px;
+            margin-bottom: 8px;
         }
-      /* =========================
-           STATISTICS SECTION
-        ========================= */
-        .stats {
-            background: #095e2f;
-            color: white;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            padding: 22px 10%;
-            text-align: center;
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: 62px;
+            margin-bottom: 8px;
         }
-        .stat {
-            border-right: 1px solid rgba(255,255,255,0.35);
+
+        .subtitle {
+            font-family: Georgia, serif;
+            font-size: 23px;
+            margin-bottom: 15px;
         }
-        .stat:last-child {
-            border-right: none;
+
+        .hero-description {
+            color: #e1eaf1;
+            line-height: 1.6;
+            font-size: 15px;
+            max-width: 530px;
         }
-        .stat-icon {
-            font-size: 28px;
-            margin-bottom: 5px;
+
+
+        /* ==============================
+           TRAVEL INFORMATION
+        ============================== */
+
+        .travel-info {
+            display: flex;
+            gap: 45px;
+            margin-top: 25px;
+            flex-wrap: wrap;
         }
-        .stat h2 {
-            font-family: 'Playfair Display', serif;
+
+        .info-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-icon {
             font-size: 27px;
         }
-        .stat p {
-            font-size: 13px;
+
+        .info-title {
+            font-size: 12px;
+            color: #b9c7d4;
         }
+
+        .info-value {
+            font-size: 14px;
+            margin-top: 3px;
+        }
+
+
+        /* ==============================
+           ATTRACTIONS SECTION
+        ============================== */
+
+        .attractions-section {
+            background: #0c07428e;
+            padding: 25px 4% 45px;
+        }
+
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .heading-left {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .heading-icon {
+            font-size: 40px;
+        }
+
+        .heading-left h2 {
+            font-family: Georgia, serif;
+            font-size: 28px;
+        }
+
+        .heading-left p {
+            margin-top: 5px;
+            color: #c5d2dd;
+            font-size: 15px;
+        }
+
+
+        /* ==============================
+           SEARCH BAR
+        ============================== */
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            border: 1px solid #7191a9;
+            border-radius: 25px;
+            padding: 10px 18px;
+            width: 310px;
+            background: rgb(227, 224, 224);
+        }
+
+        .search-box span {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .search-box input {
+            width: 100%;
+            border: none;
+            outline: none;
+            background: transparent;
+            color: rgb(11, 8, 8);
+            font-size: 14px;
+        }
+
+        .search-box input::placeholder {
+            color: #10181e;
+        }
+
+
+        /* ==============================
+           FILTER BUTTONS
+        ============================== */
+
+        .filters {
+            display: flex;
+            gap: 12px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            border: 1px solid #7291aa;
+            color: rgb(0, 0, 0);
+            background-color: #ffc21c;
+            padding: 9px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .filter-btn:hover {
+            background: #11cda0;
+            border-color: #11cda0;
+        }
+
+        .filter-btn.active {
+            background: #13d1a0;
+            border-color: #13d1a0;
+        }
+
+
+        /* ==============================
+           ATTRACTION GRID
+        ============================== */
+
+        .attraction-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+
+        /* ==============================
+           ATTRACTION CARD
+        ============================== */
+
+        .card {
+            background: #a408229f;
+            border: 1px solid #44ff00;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #16d3a2;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 185px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 13px;
+        }
+
+        .card-title {
+            font-family: Georgia, serif;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .rating {
+            color: #ffc21c;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .reviews {
+            color: #c6d4df;
+            font-size: 11px;
+            margin-left: 5px;
+        }
+
+        .card-description {
+            color: #d2dee7;
+            font-size: 20px;
+            line-height: 0;
+            min-height: 1px;
+        }
+
+
+        /* ==============================
+           CARD DETAILS
+        ============================== */
+
+        .card-details {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 12px;
+            color: #d7e4ed;
+            font-size: 12px;
+            gap: 5px;
+        }
+
+        .detail {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+
+        /* ==============================
+           CATEGORY TAG
+        ============================== */
+
+        .category-tag {
+            display: inline-block;
+            float: right;
+            border: 1px solid #287e80;
+            background: #07334f;
+            color: #1ae1ad;
+            border-radius: 15px;
+            padding: 5px 9px;
+            font-size: 10px;
+        }
+
+
+        /* ==============================
+           VIEW MORE
+        ============================== */
+
+        .maps-link {
+            display: block;
+            color: #12dfad;
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 13px;
+        }
+
+        .maps-link:hover {
+            color: white;
+        }
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    padding:60px 6% 25px;
+
+    background:#020b12;
+}
+
+.footer-grid{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1fr;
+
+    gap:50px;
+}
+
+.footer-brand p{
+
+    max-width:350px;
+
+    color:#778894;
+
+    line-height:1.7;
+
+    margin-top:15px;
+}
+
+.footer-column h4{
+
+    color:#ffc857;
+
+    margin-bottom:20px;
+}
+
+.footer-column a{
+
+    display:block;
+
+    color:#81919c;
+
+    margin-bottom:12px;
+
+    font-size:14px;
+
+    transition:.3s;
+}
+
+.footer-column a:hover{
+    color:white;
+}
+
+.copyright{
+
+    max-width:1400px;
+
+    margin:45px auto 0;
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    color:#657580;
+
+    font-size:13px;
+
+    display:flex;
+
+    justify-content:space-between;
+}
+
+        /* ==============================
+           RESPONSIVE DESIGN
+        ============================== */
+
+        @media (max-width: 1100px) {
+
+            .attraction-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 52px;
+            }
+        }
+
+
+        @media (max-width: 700px) {
+
+            .navbar {
+                height: auto;
+                padding: 15px 5%;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 500px;
+                background-position: center;
+                padding: 40px 7%;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .travel-info {
+                gap: 20px;
+            }
+
+            .section-heading {
+                align-items: flex-start;
+            }
+
+            .search-box {
+                width: 100%;
+            }
+
+            .attraction-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .attractions-section {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+        }
+
+
     </style>
 </head>
-<body style="background-image: url(coorg.png); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat ;">
-    <!-- =========================
-     NAVIGATION
-========================= -->
 
-<nav>
+
+<body>
+
+
+<!-- ==========================================
+     NAVIGATION BAR
+========================================== -->
+
+<header class="navbar">
+
     <div class="logo">
-        GHOOMO
-        <span>INDIA</span>
-    </div>
 
-    <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
-    </div>
-
-    <a href="#" class="plan-button">
-        Plan My Trip
-    </a>
-</nav>
-<br><br><br><br>
-    <p style="font-size: x-large; color: chartreuse;">Plan your perfect trip by exploring these popular destinations</p>
-    <br>
-    <p style="color: blueviolet; font-size: larger;">✤ ABBEY FALLS</p>
-                <p style="color: #ffd23f;">🏷️ Destination Category: Nature<br>
-    &nbsp;&nbsp;💸 Cost: ₹20 approx<br>
-    &nbsp;&nbsp;⏳ Time Required: 30-45 mins<br>
-    &nbsp;&nbsp;🕒 Open Hours: 9:00 AM – 5:00 PM<br>
-    &nbsp;&nbsp;🍽️ Local Hotels: Hotel Coorg International, The Ibnii Coorg<br>
-    &nbsp;&nbsp;👗 Attire: Comfortable clothes & walking shoes<br>
-    <a href="https://www.google.com/maps/place/Abbi+Waterfall/@12.4578946,75.7139054,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba5010ed0b5e627:0xad38db4e99b4e610!8m2!3d12.4578946!4d75.7164803!16s%2Fm%2F026hxr2?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">🗺️ View on Google Maps</a></p><br>
-
-    <p style="color: blueviolet; font-size: larger;">✤ RAJA'S SEAT</p>
-                <p style="color: #ffd23f;">🏷️ Destination Category: Viewpoint / Nature<br>
-    &nbsp;&nbsp;💸 Cost: ₹20 approx.<br>
-    &nbsp;&nbsp;⏳ Time Required: 1-2 hrs<br>
-    &nbsp;&nbsp;🕒 Open Hours: 5:30 AM – 8:00 PM<br>
-    &nbsp;&nbsp;🍽️ Local Hotels: Hotel Coorg International, Taj Madikeri Resort & Spa<br>
-    &nbsp;&nbsp;👗 Attire: Comfortable casual wear<br>
-    <a href="https://www.google.com/maps/place/Raja+Seat+Garden/@12.4144899,75.7343237,17z/data=!4m6!3m5!1s0x3ba5aaa27e3ff73b:0x44ec66ab75297e32!8m2!3d12.4144899!4d75.7368986!16s%2Fg%2F11dfttmpyh?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">🗺️ View on Google Maps</a></p><br>
-
-    <p style="color: blueviolet; font-size: larger;">✤ MADIKERI FORT</p>
-                <p style="color: #ffd23f;">🏷️ Destination Category: Historical / Fort<br>
-    &nbsp;&nbsp;💸 Cost: Free<br>
-    &nbsp;&nbsp;⏳ Time Required: 1-2 hrs<br>
-    &nbsp;&nbsp;🕒 Open Hours: 10:00 AM – 5:30 PM<br>
-    &nbsp;&nbsp;🍽️ Local Hotels: Club Mahindra Madikeri Resort<br>
-    &nbsp;&nbsp;👗 Attire: Comfortable casual wear<br>
-    <a href="https://www.google.com/maps/place/Madikeri+Fort/@12.4211545,75.7361412,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba5aa9fa6aaaaab:0x52ac62295bbe6e8e!8m2!3d12.4211545!4d75.7387161!16s%2Fm%2F0b_zn8j?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">🗺️ View on Google Maps</a></p><br>
-
-    <p style="color: blueviolet; font-size: larger;">✤ TALAKAVERI</p>
-                <p style="color: #ffd23f;">🏷️ Destination Category: Religious / Nature<br>
-    &nbsp;&nbsp;💸 Cost: Free<br>
-    &nbsp;&nbsp;⏳ Time Required: 1-2 hrs<br>
-    &nbsp;&nbsp;🕒 Open Hours: 6:00 AM – 6:00 PM<br>
-    &nbsp;&nbsp;🍽️ Local Hotels: Hotel Mayura Valley View, Hotel Coorg International<br>
-    &nbsp;&nbsp;👗 Attire: Modest clothing & comfortable footwear<br>
-    <a href="https://www.google.com/maps/place/Tala+Kaveri,+Karnataka+571247/@12.3841858,75.4901718,17z/data=!4m6!3m5!1s0x3ba4584332ac11c7:0x623bac3828517882!8m2!3d12.3858741!4d75.4947431!16zL20vMDM4MjNu?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">🗺️ View on Google Maps</a></p><br>
-
-<!-- =========================
-     STATISTICS
-========================= -->
-
-<section class="stats"
-style="margin-top: 210px;">
-
-    <div class="stat">
-        <div class="stat-icon">
-            📍
+        <div class="logo-icon">
+            <img src="travel.logo.jpeg" height="60px" width="60px" style="border-radius: 50%; object-fit: cover;">
         </div>
-        <h2>30+</h2>
-        <p>Cities</p>
+
+        <div class="logo-text">
+            <h2 style="color: #ffc21c;">GHOOMO </h2>
+            <h3 style="color: #ffc21c;">INDIA</h3>
+        </div>
+
     </div>
 
-    <div class="stat">
-        <div class="stat-icon">
-            🗺️
-        </div>
-        <h2>100+</h2>
-        <p>Destinations</p>
-    </div>
 
-    <div class="stat">
-        <div class="stat-icon">
-            🏅
+    <nav class="nav-links">
+
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact Us</a>
+        <span class="search-icon">⌕</span>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ==========================================
+     HERO SECTION
+========================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="location">
+            📍 Karnataka
         </div>
-        <h2>4.7/5</h2>
-        <p>Average Rating</p>
+
+        <h1 style="color: rgb(255, 185, 9);">Coorg</h1>
+
+        <div class="subtitle" style="color: lawngreen;">
+Scotland of India        </div>
+
+        <p class="hero-description">
+Coorg (Kodagu) is a beautiful hill station in Karnataka, famous for its misty mountains, coffee plantations, waterfalls, and lush green forests. It is an ideal destination for nature lovers and adventure seekers, offering attractions like Abbey Falls, Raja’s Seat, Dubare Elephant Camp, and Mandalpatti.
+
+        <!-- Travel Information -->
+
+        <div class="travel-info">
+
+            <div class="info-box">
+
+                <div class="info-icon" style="color: orangered;">☀</div>
+
+                <div>
+                    <div class="info-title" style="color: rgb(205, 16, 67);">
+                        Best Time
+                    </div>
+
+                    <div class="info-value">
+                        Oct – Mar
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <div class="info-icon" style="color: chartreuse;">🗺</div>
+
+                <div>
+                    <div class="info-title" style="color: rgb(205, 16, 67);">
+                        Language
+                    </div>
+
+                    <div class="info-value">
+                        Kannada, Kodava
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 
 </section>
+
+
+
+<!-- ==========================================
+     TOURIST ATTRACTIONS SECTION
+========================================== -->
+
+<section class="attractions-section">
+
+
+    <!-- Section heading -->
+
+    <div class="section-heading">
+
+        <div class="heading-left">
+
+            <div class="heading-icon" style="color: hotpink;">
+                🏛
+            </div>
+
+            <div>
+
+                <h2 style="color: limegreen;">
+                    Top Tourist Attractions in Coorg
+                </h2>
+
+                <p>
+                    Discover the most popular places to visit in and around Coorg.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <span style="color: #020b12;">⌕</span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search attractions..."
+                onkeyup="searchAttractions()"
+            >
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==========================================
+         FILTER BUTTONS
+    ========================================== -->
+
+    <div class="filters">
+
+        <button
+            class="filter-btn active"
+            onclick="filterCards('all', this)">
+            All
+        </button>
+
+        <button
+            class="filter-btn"
+            onclick="filterCards('Historical', this)">
+            🏛 Historical
+        </button>
+
+        <button
+            class="filter-btn"
+            onclick="filterCards('Nature', this)">
+            🌿 Nature
+        </button>
+
+        <button
+            class="filter-btn"
+            onclick="filterCards('Adventure', this)">
+            ⛰ Adventure
+        </button>
+
+        <button
+            class="filter-btn"
+            onclick="filterCards('Shopping', this)">
+            🎭 Shopping
+        </button>
+
+        <button
+            class="filter-btn"
+            onclick="filterCards('Parks', this)">
+            🌳 Parks
+        </button>
+
+        <button
+            class="filter-btn"
+            onclick="filterCards('Religious', this)">
+            ֍ Religious
+        </button>
+
+    </div>
+
+
+
+    <!-- ==========================================
+         ATTRACTION CARDS
+    ========================================== -->
+
+    <div class="attraction-grid" id="attractionGrid">
+
+        <div class="card" data-category="Nature">
+
+            <img
+                class="card-image"h
+                src="Abbey Falls.jfif"
+                alt="Abbey Falls"
+            >
+
+            <div class="card-content">
+
+                <span class="category-tag">
+                    Nature
+                </span>
+
+                <h3 class="card-title">
+Abbey Falls             </h3>
+
+                <div class="rating">
+                    ★ 4.5 / 5
+                
+                </div>
+
+                <div class="card-details">
+
+        
+                    <div class="detail">
+                        🕐 1–2 hrs
+                    </div>
+
+                </div>
+
+                <a
+                    class="maps-link"
+                    href=""
+                    target="_blank" style="margin-left: 190px;">
+                    📍 View more 
+                </a>
+
+            </div>
+
+        </div>
+
+       <div class="card" data-category="Religious">
+
+            <img
+                class="card-image"h
+                src="Namdroling Monastery Golden Temple.jfif"
+                alt="Namdroling Monastery"
+            >
+
+            <div class="card-content">
+
+                <span class="category-tag">
+                    Religious
+                </span>
+
+                <h3 class="card-title">
+Namdroling Monastery       </h3>
+
+                <div class="rating">
+                    ★ 4.7 / 5
+                
+                </div>
+
+                <div class="card-details">
+
+        
+                    <div class="detail">
+                        🕐 2–3 hrs
+                    </div>
+
+                </div>
+
+                <a
+                    class="maps-link"
+                    href=""
+                    target="_blank" style="margin-left: 190px;">
+                    📍 View more 
+                </a>
+
+            </div>
+
+        </div>
+
+       <div class="card" data-category="Nature">
+
+            <img
+                class="card-image"h
+                src="Raja's Seat in Coorg.jfif"
+                alt="Raja's Seat"
+            >
+
+            <div class="card-content">
+
+                <span class="category-tag">
+                    Nature
+                </span>
+
+                <h3 class="card-title">
+Raja’s Seat         </h3>
+
+                <div class="rating">
+                    ★ 4.6 / 5
+                
+                </div>
+
+                <div class="card-details">
+
+        
+                    <div class="detail">
+                        🕐 2–4 hrs
+                    </div>
+
+                </div>
+
+                <a
+                    class="maps-link"
+                    href=""
+                    target="_blank" style="margin-left: 190px;">
+                    📍 View more 
+                </a>
+
+            </div>
+
+        </div>
+
+       <div class="card" data-category="Historical">
+
+            <img
+                class="card-image"h
+                src="Madikeri Fort – The Gem Of 17th Century - Ynorme.jfif"
+                alt="Madikeri Fort"
+            >
+
+            <div class="card-content">
+
+                <span class="category-tag">
+                    Historical
+                </span>
+
+                <h3 class="card-title">
+Madikeri Fort     </h3>
+
+                <div class="rating">
+                    ★ 4.3 / 5
+                
+                </div>
+
+                <div class="card-details">
+
+        
+                    <div class="detail">
+                        🕐 2–3 hrs
+                    </div>
+
+                </div>
+
+                <a
+                    class="maps-link"
+                    href=""
+                    target="_blank" style="margin-left: 190px;">
+                    📍 View more 
+                </a>
+
+            </div>
+
+        </div>
+   <div class="card" data-category="Nature">
+
+            <img
+                class="card-image"h
+                src="Talakaveri Coorg Timings and Places to Visit.jfif"
+                alt="Talakaveri"
+            >
+
+            <div class="card-content">
+
+                <span class="category-tag">
+                    Nature
+                </span>
+
+                <h3 class="card-title">
+Talakaveri   </h3>
+
+                <div class="rating">
+                    ★ 4.6 / 5
+                
+                </div>
+
+                <div class="card-details">
+
+        
+                    <div class="detail">
+                        🕐 3–4 hrs
+                    </div>
+
+                </div>
+
+                <a
+                    class="maps-link"
+                    href=""
+                    target="_blank" style="margin-left: 190px;">
+                    📍 View more 
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    <img src="travel.logo.jpeg" height="60px" width="60px" style="border-radius: 50%;">
+                </div>
+
+                <div>
+                    <h2>GHOOMO</h2>
+                    <span>INDIA</span>
+                </div>
+
+            </div>
+
+
+            <p>
+                Discover the incredible diversity of India —
+                One destination at a time.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Explore</h4>
+
+            <a href="#states">Destinations</a>
+            <a href="#experiences">Experiences</a>
+            <a href="#">Popular Places</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Company</h4>
+
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        <span>
+            © 2026 Ghoomo India
+        </span>
+
+        <span>
+            Explore • Discover • Cherish
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+
+
+
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+
+<script>
+
+
+    /* ==============================
+       CATEGORY FILTER
+    ============================== */
+
+    function filterCards(category, button) {
+
+        const cards =
+            document.querySelectorAll(".card");
+
+        const buttons =
+            document.querySelectorAll(".filter-btn");
+
+
+        /* Remove active from all buttons */
+
+        buttons.forEach(function(btn) {
+
+            btn.classList.remove("active");
+
+        });
+
+
+        /* Add active to selected button */
+
+        button.classList.add("active");
+
+
+        /* Show / hide cards */
+
+        cards.forEach(function(card) {
+
+            if (
+                category === "all" ||
+                card.dataset.category === category
+            ) {
+
+                card.style.display = "block";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+
+
+    /* ==============================
+       SEARCH FUNCTION
+    ============================== */
+
+    function searchAttractions(){
+
+        const searchText =
+            document.getElementById("searchInput")
+            .value
+            .toLowerCase();
+
+
+        const cards =
+            document.querySelectorAll(".card");
+
+
+        cards.forEach(function(card) {
+
+            const title =
+                card
+                .querySelector(".card-title")
+                .innerText
+                .toLowerCase();
+
+
+            const description =
+                card
+                .querySelector(".card-description")
+                .innerText
+                .toLowerCase();
+
+
+            if (
+                title.includes(searchText) ||
+                description.includes(searchText)
+            ) {
+
+                card.style.display = "block";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+</script>
+
 
 </body>
 </html>
