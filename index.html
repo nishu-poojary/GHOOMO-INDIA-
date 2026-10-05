@@ -143,7 +143,7 @@ input{
             rgba(3,16,28,.55) 55%,
             rgba(3,16,28,.15)
         ),
-        url("https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=2200&q=90");
+        url("kar2.jfif");
     background-size:cover;
     background-position:center;
 }
@@ -337,105 +337,202 @@ input{
     max-width:650px;
 }
 
+/* ================= CITIES SECTION ================= */
 
-/* =====================================================
-   STATE CARDS
-===================================================== */
+.cities-section {
 
-.state-grid{
+    padding: 55px 4%;
 
-    max-width:1400px;
+    background:
 
-    margin:auto;
+        linear-gradient(
+            rgba(5,23,34,0.94),
+            rgba(5,23,34,0.97)
+        ),
 
-    display:grid;
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80")
 
-    grid-template-columns:
-        repeat(6,1fr);
-
-    gap:18px;
+        center / cover fixed;
 }
 
-.state-card{
 
-    height:330px;
+/* SECTION TITLE */
 
-    position:relative;
+.section-title {
 
-    overflow:hidden;
+    text-align: center;
 
-    border-radius:20px;
-
-    cursor:pointer;
-
-    border:1px solid rgba(255,255,255,.12);
-
-    transition:.4s;
+    margin-bottom: 38px;
 }
 
-.state-card:hover{
+.section-title small {
 
-    transform:translateY(-10px);
+    color: #f47b20;
 
-    border-color:#ffc857;
+    letter-spacing: 4px;
+
+    font-weight: bold;
 }
 
-.state-card img{
+.section-title h2 {
 
-    width:100%;
-    height:100%;
+    font-family: Georgia, serif;
 
-    object-fit:cover;
+    font-size: 38px;
 
-    transition:.6s;
+    margin: 8px 0;
 }
 
-.state-card:hover img{
-    transform:scale(1.1);
+
+/* YELLOW LINE */
+
+.line {
+
+    width: 55px;
+
+    height: 5px;
+
+    background: #ffc94f;
+
+    border-radius: 10px;
+
+    margin: auto;
 }
 
-.state-card::after{
 
-    content:"";
+/* ================= CITY GRID ================= */
 
-    position:absolute;
+.city-grid {
 
-    inset:0;
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 18px;
+}
+
+
+/* CITY CARD */
+
+.city-card {
+
+    min-height: 275px;
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background: #102936;
+
+    transition: 0.3s;
+}
+
+.city-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: #ffc94f;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+
+/* CITY IMAGE */
+
+.city-image {
+
+    width: 100%;
+
+    height: 275px;
+
+    object-fit: cover;
+}
+
+
+/* DARK GRADIENT OVER IMAGE */
+
+.city-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
 
     background:
         linear-gradient(
             transparent 35%,
-            rgba(0,0,0,.9)
+            rgba(0,0,0,0.92) 100%
         );
 }
 
-.state-content{
 
-    position:absolute;
+/* CITY INFORMATION */
 
-    z-index:2;
+.city-info {
 
-    bottom:20px;
+    position: absolute;
 
-    left:20px;
+    z-index: 1;
 
-    right:20px;
+    bottom: 16px;
+
+    left: 17px;
+
+    right: 15px;
 }
 
-.state-content h3{
+.city-info h3 {
 
-    font-family:"Playfair Display",serif;
+    font-family: Georgia, serif;
 
-    font-size:24px;
+    font-size: 22px;
 
-    margin-bottom:7px;
+    margin-bottom: 5px;
 }
 
-.state-content p{
+.city-info p {
 
-    font-size:12px;
+    font-size: 13px;
 
-    color:#d5dde1;
+    color: #ddd;
+
+    margin-bottom: 12px;
+}
+
+
+/* CARD BOTTOM */
+
+.card-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+/* RATING */
+
+.rating {
+
+    font-size: 14px;
+}
+
+.rating span {
+
+    color: #ffc94f;
+
+    font-size: 19px;
 }
 
 
@@ -546,7 +643,7 @@ input{
             rgba(3,15,24,.75),
             rgba(3,15,24,.9)
         ),
-        url("https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=2000&q=85");
+        url("https://www.fabhotels.com/blog/wp-content/uploads/2019/09/Hampi-1.jpg");
 
     background-size:cover;
 
@@ -822,8 +919,8 @@ footer{
 
     <nav class="nav-links">
 
-        <a href="#" class="active">Home</a>
-        <a href="#states">Destinations</a>
+        <a href="index.html">Home</a>
+        <a href="#cities">Destinations</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
 
@@ -839,7 +936,7 @@ footer{
         <i class="fa-regular fa-user"></i>
 
         <button class="nav-btn"
-        onclick="scrollToStates()">
+        onclick="scrollToCities()">
             Plan Your Trip →
             
         </button>
@@ -858,30 +955,23 @@ footer{
 
     <div class="hero-content">
 
-        <div class="hero-tag" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: chocolate; font-style: oblique; font-size: larger;">
-            ONE NATION / COUNTLESS DESTINATIONS
+        <div class="hero-tag" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: rgb(241, 139, 67); font-style: oblique; font-size: larger;">
+            ONE STATE / COUNTLESS DESTINATIONS
         </div>
 
-        <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-            Discover The
-            <span style="color: forestgreen;">Wonders Of India</span>
+        <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: orangered;">
+            KARNATAKA
         </h1>
 
-        <p class="hero-description">
-
-            From snow-covered mountains to tropical beaches,
-            ancient temples to vibrant cities —
-            Discover the incredible diversity of India.
-
-        </p>
+        <p class="hero-description">One State, Many Worlds</p>
 
 
         <div class="hero-buttons">
 
             <button class="explore-btn"
-                    onclick="scrollToStates()">
+                    onclick="scrollToCities()">
 
-                Explore India
+                Explore Karnataka
                 →
                 
             </button>
@@ -976,177 +1066,438 @@ footer{
 
 
 <!-- =====================================================
-     STATES
-===================================================== -->
+                    CITY SECTION
+====================================================== -->
 
-<section class="section" id="states">
+<section class="cities-section" id="cities">
 
-    <div class="section-header">
 
-        <div class="section-label">
-            EXPLORE BY STATE
-        </div>
+    <!-- SECTION HEADING -->
 
-        <h2 class="section-title">
-            Incredible India Awaits
+    <div class="section-title">
+
+        <small>
+            EXPLORE MORE
+        </small>
+
+        <h2>
+            Popular Cities in Karnataka
         </h2>
 
-        <p class="section-description">
-            Choose a state and begin your journey through
-            India's breathtaking landscapes, rich history,
-            culture and unforgettable experiences.
-        </p>
+        <div class="line"></div>
 
     </div>
 
 
-    <div class="state-grid">
+
+    <!-- CITY GRID -->
+
+    <div class="city-grid">
 
 
-        <!-- KARNATAKA -->
-<a href="Karnataka.html" style="text-decoration: none; color: inherit;">
-        <div class="state-card"
-            data-state="Karnataka">
-            <img src="karnataka.jpeg">
 
-            <div class="state-content">
+        <!-- ================= BANGALORE ================= -->
 
-                <h3>Karnataka</h3>
+        <div class="city-card"
+        data-city="Bangalore">
+
+            <img
+                class="city-image"
+                src="Banglore India.jfif"
+                alt="Bangalore"
+            >
+            <a href="bangalore.html">
+            <div class="city-info">
+
+                <h3>
+                    Bangalore
+                </h3>
 
                 <p>
-                    One State, Many Worlds
+                    Silicon Valley of India
                 </p>
 
-                <div class="state-arrow">
-                    →
+                <div class="card-bottom">
+
+                    <div class="rating">
+                        <span>★</span> 4.7
+                    </div>
+
+                    <a>
+                        →
+                    </a>
+
                 </div>
 
             </div>
-
+            </a>
         </div>
-</a>
 
-        <!-- KERALA -->
-<a href="Kerala.html" style="text-decoration: none; color: inherit;">
-        <div class="state-card"
-             data-state="Kerala">
-            <img  src="kerala.jpg" alt="Kerala">
 
-            <div class="state-content">
 
-                <h3>Kerala</h3>
+        <!-- ================= MYSORE ================= -->
+
+        <div class="city-card"
+        data-city="Mysore">
+
+            <img
+                class="city-image"
+                src="mysore.jpg"
+                alt="Mysore"
+            >
+            <a href="mysore.html">
+
+            <div class="city-info">
+
+                <h3>
+                    Mysore
+                </h3>
 
                 <p>
-                    God's Own Country
+                    City of Palaces
                 </p>
 
-                <div class="state-arrow">
-                    →
+                <div class="card-bottom">
+
+                    <div class="rating">
+                        <span>★</span> 4.8
+                    </div>
+
+                    <a>
+                        →
+                    </a>
+
                 </div>
 
             </div>
-
+            </a>
         </div>
-</a>
 
-        <!-- GOA -->
-<a href="Goa.html" style="text-decoration: none; color: inherit;">
 
-        <div class="state-card"
-             data-state="Goa">
-            <img src="goa.jpg" alt="Goa">
 
-            <div class="state-content">
+        <!-- ================= GOKARNA ================= -->
 
-                <h3>Goa</h3>
+        <div class="city-card"
+        data-city="Gokarna">
+
+            <img
+                class="city-image"
+                src="gokarna.jpg"
+                alt="Gokarna"
+            >
+            <a href="gokarna.html">
+
+            <div class="city-info">
+
+                <h3>
+                    Gokarna
+                </h3>
 
                 <p>
-                    Beach Capital of India
+                    Kashi of the South
                 </p>
 
-                <div class="state-arrow">
-                    →
+                <div class="card-bottom">
+
+                    <div class="rating">
+                        <span>★</span> 4.5
+                    </div>
+
+                    <a>
+                        →
+                    </a>
+
                 </div>
 
             </div>
-
+            </a>
         </div>
-</a>
 
-        <!-- MAHARASHTRA -->
-<a href="Maharashtra.html" style="text-decoration: none; color: inherit;">
 
-        <div class="state-card"
-             data-state="Maharashtra">
-            <img src="https://images.unsplash.com/photo-1595658658481-d53d3f999875?auto=format&fit=crop&w=800&q=85" alt="Maharashtra">
 
-            <div class="state-content">
+        <!-- ================= MANGALORE ================= -->
 
-                <h3>Maharashtra</h3>
+        <div class="city-card"
+        data-city="Mangalore">
+
+            <img
+                class="city-image"
+                src="mangalore.jpg"
+                alt="Mangalore"
+            >
+            <a href="mangalore.html">
+
+            <div class="city-info">
+
+                <h3>
+                    Mangalore
+                </h3>
 
                 <p>
-                    Gateway of India
+                    Rome of the East
                 </p>
 
-                <div class="state-arrow">
-                    →
+                <div class="card-bottom">
+
+                    <div class="rating">
+                        <span>★</span> 4.4
+                    </div>
+
+                    <a>
+                        →
+                    </a>
+
                 </div>
 
             </div>
-
+            </a>
         </div>
-</a>
 
-        <!-- TAMIL NADU -->
-<a href="TamilNadu.html" style="text-decoration: none; color: inherit;">
 
-        <div class="state-card"
-             data-state="Tamil Nadu">
-            <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=85" alt="Tamil Nadu">
 
-            <div class="state-content">
+        <!-- ================= HAMPI ================= -->
 
-                <h3>Tamil Nadu</h3>
+        <div class="city-card"
+        data-city="Hampi">
+
+            <img
+                class="city-image"
+                src="hampi.jpg"
+                alt="Hampi"
+            >
+            <a href="hampi.html">
+
+            <div class="city-info">
+
+                <h3>
+                    Hampi
+                </h3>
 
                 <p>
-                    Madras State
+                    City of Ruins
                 </p>
 
-                <div class="state-arrow">
-                    →
+                <div class="card-bottom">
+
+                    <div class="rating">
+                        <span>★</span> 4.8
+                    </div>
+
+                    <a>
+                        →
+                    </a>
+
                 </div>
 
             </div>
-
+            </a>
         </div>
-</a>
 
-        <!-- ANDHRA PRADESH -->
-<a href="AndhraPradesh.html" style="text-decoration: none; color: inherit;">
 
-        <div class="state-card"
-             data-state="Andhra Pradesh">
-            <img src="andhra pradesh.jpg" alt="Andhra Pradesh">
 
-            <div class="state-content">
+        <!-- ================= COORG ================= -->
 
-                <h3>Andhra Pradesh</h3>
+        <div class="city-card"
+        data-city="Coorg">
+
+            <img
+                class="city-image"
+                src="coorg.jpg"
+                alt="Coorg"
+            >
+            <a href="coorg.html">
+
+            <div class="city-info">
+
+                <h3>
+                    Coorg
+                </h3>
 
                 <p>
-                    Kohinoor of India
+                    Scotland of India
                 </p>
 
-                <div class="state-arrow">
-                    →
+                <div class="card-bottom">
+
+                    <div class="rating">
+                        <span>★</span> 4.8
+                    </div>
+
+                    <a>
+                        →
+                    </a>
+
                 </div>
 
             </div>
-
+            </a>
         </div>
+
+
+
+        <!-- ================= CHIKKAMAGALURU ================= -->
+
+        <div class="city-card"
+        data-city="Chikkamagaluru">
+
+            <img
+                class="city-image"
+                src="chikkamagaluru.jpg"
+                alt="Chikkamagaluru"
+            >
+            <a href="chikkamagaluru.html">
+
+            <div class="city-info">
+
+                <h3>
+                    Chikkamagaluru
+                </h3>
+
+                <p>
+                    Land of Coffee
+                </p>
+
+                <div class="card-bottom">
+
+                    <div class="rating">
+                        <span>★</span> 4.7
+                    </div>
+
+                    <a>
+                        →
+                    </a>
+
+                </div>
+
+            </div>
+            </a>
+        </div>
+
+
+
+        <!-- ================= UDUPI ================= -->
+
+        <div class="city-card"
+        data-city="Udupi">
+
+            <img
+                class="city-image"
+                src="udupi.jpg"
+                alt="Udupi"
+            >
+            <a href="udupi.html">
+
+            <div class="city-info">
+
+                <h3>
+                    Udupi
+                </h3>
+
+                <p>
+                    The Temple Town
+                </p>
+
+                <div class="card-bottom">
+
+                    <div class="rating">
+                        <span>★</span> 4.5
+                    </div>
+
+                    <a>
+                        →
+                    </a>
+
+                </div>
+
+            </div>
+            </a>
+        </div>
+
+
+
+        <!-- ================= SHIVAMOGGA ================= -->
+
+        <div class="city-card"
+        data-city="Shivamogga">
+
+            <img
+                class="city-image"
+                src="shivamogga.jpg"
+                alt="Shivamogga"
+            >
+            <a href="shivamogga.html">
+
+            <div class="city-info">
+
+                <h3>
+                    Shivamogga
+                </h3>
+
+                <p>
+                    Gateway of Malnad
+                </p>
+
+                <div class="card-bottom">
+
+                    <div class="rating">
+                        <span>★</span> 4.3
+                    </div>
+
+                    <a>
+                        →
+                    </a>
+
+                </div>
+
+            </div>
+            </a>
+        </div>
+
+
+
+        <!-- ================= BIJAPUR ================= -->
+
+        <div class="city-card"
+        data-city="Vijayapura">
+
+            <img
+                class="city-image"
+                src="bijapur.jpg"
+                alt="Bijapur"
+            >
+            <a href="bijapur.html">
+
+            <div class="city-info">
+
+                <h3>
+                    Vijayapura
+                </h3>
+
+                <p>
+                    City of Victory
+                </p>
+
+                <div class="card-bottom">
+
+                    <div class="rating">
+                        <span>★</span> 4.4
+                    </div>
+
+                    <a>
+                        →
+                    </a>
+
+                </div>
+
+            </div>
+            </a>
+        </div>
+
 
     </div>
-</a>
+
 </section>
+
 
 
 
@@ -1161,8 +1512,8 @@ footer{
         <div class="experience-image">
 
             <img
-            src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=85"
-            alt="India">
+            src="https://www.asparkholidays.com/uploads/45331_palaces-heaven-on-earth-1.jpg"
+            alt="Karnataka">
 
         </div>
 
@@ -1180,13 +1531,7 @@ footer{
 
             <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
 
-                India isn't just a destination.
-                It's a collection of stories, people,
-                flavours, traditions and experiences.
-
-                Let Ghoomo India help you discover
-                the India beyond the tourist trail.
-
+                Karnataka is a beautiful state in southern India, known for its rich history, stunning landscapes, vibrant culture, and diverse tourist attractions. From the magnificent palaces of Mysuru and ancient ruins of Hampi to the beaches of Gokarna and Mangaluru, Karnataka offers something for every traveller. The state is also famous for its waterfalls, forests, hill stations, temples, wildlife, traditional cuisine, and unique cultural heritage. Let Ghoomo India help you discover Karnataka beyond the tourist trail.
             </p>
 
 
@@ -1208,7 +1553,7 @@ footer{
                     <i class="fa-solid fa-compass"></i>
 
                     <strong>
-                        Discover Hidden Places
+                        Discover Hidden and Underrated Places
                     </strong>
 
                 </div>
@@ -1254,12 +1599,12 @@ footer{
 <section class="cta" id="contact">
 
     <h2>
-        Your India Adventure
+        Your Adventure
         Starts Here
     </h2>
 
     <p>
-        Explore. Discover. Experience.
+        Explore.  Discover.  Experience.
     </p>
 
     <button
@@ -1300,7 +1645,7 @@ footer{
 
 
             <p>
-                Discover the incredible diversity of India —
+                Discover the incredible diversity of Karnataka —
                 One destination at a time.
             </p>
 
@@ -1353,10 +1698,10 @@ footer{
    SCROLL TO STATES
 ===================================================== */
 
-function scrollToStates(){
+function scrollToCities(){
 
     document
-        .getElementById("states")
+        .getElementById("cities")
         .scrollIntoView({
             behavior:"smooth"
         });
@@ -1398,7 +1743,7 @@ function searchPlace(){
         input.value.trim().toLowerCase();
 
     const cards =
-        document.querySelectorAll(".state-card");
+        document.querySelectorAll(".city-card");
 
     if(!value){
 
@@ -1411,10 +1756,10 @@ function searchPlace(){
 
     cards.forEach(card=>{
 
-        const state =
-            card.dataset.state.toLowerCase();
+        const city =
+            card.dataset.city.toLowerCase();
 
-        if(state.includes(value)){
+        if(city.includes(value)){
 
             card.scrollIntoView({
                 behavior:"smooth",
@@ -1444,7 +1789,7 @@ function searchPlace(){
     if(!found){
 
         alert(
-            "We couldn't find that state in the current list."
+            "We couldn't find that city in the current list."
         );
 
     }
